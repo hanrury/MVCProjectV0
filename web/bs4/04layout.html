@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <title>Hello, world!</title>
+    <style>
+        .layout1{height: 150px;background:yellowgreen;margin-bottom: 30px;}
+        .layout2{height: 150px;background:lightsteelblue;margin-bottom: 10px;}
+        .bg{height: 45px;background:lightpink; border:1px dashed blue;margin-bottom: 10px;}
+        .bg2{height: 45px;background:palevioletred; border:1px dashed blue;margin-bottom: 10px;}
+        .bg3{height: 45px;background:yellow; border:1px dashed blue;margin-bottom: 10px;}
+        .bg4{height: 45px;background:lightslategray; border:1px dashed blue;margin-bottom: 10px;}
+        .bg5{height: 45px;background:orange; border:1px dashed blue;margin-bottom: 10px;}
+    </style>
+</head>
+<body>
+<h1>부트스트랩 레이아웃</h1>
+<h2>그리드 시스템</h2>
+<p>반응형 웹을 손쉽게 만들기 위해 그리드 시스템을 사용함</p>
+<p>각 장치에 적합하게 웹 페이지를 구현하기 위해
+    장치별 특정 해상도를 기준으로 레이아웃을 다르게 표현하는 것을 의미함</p>
+<p>indicius.com</p>
+<p>반응형 웹에 적용한 일반적인 중단점 breakpoint 은
+    576px(스마트폰), 768px(태블릿), 992px(일반적인 데스크탑), 1200px(넓은화면) 임</p>
+<h2>컨텐츠 감싸기</h2>
+<p>레이아웃 관련태그를 하나로 묶기 위해 사용할 수 있는 태그는
+    container(화면크기 고정:1170px), container-fluid(전체화면크기) 등이 있음</p>
+
+<div class="layout1 container">container</div>
+<div class="layout2 container-fluid">container fluid</div>
+
+<h2>그리드 레이아웃</h2>
+<p>웹 페이지의 구성요소들을 특정 너비로 나누어진 열을 기준으로 배치하는 것을 의미</p>
+<p>부트스트랩은 12열 그리드 시스템을 이용함</p>
+<p>레이아웃을 구성하는 방법</p>
+<ol>
+    <li>container/container-fluid 선택</li>
+    <li>row 행을 배치</li>
+    <li>col-*-n 클래스로 컬럼을 배치</li>
+    <li>컬럼안에 컨텐츠를 배치</li>
+</ol>
+
+<div class="layout2 container">
+    <div class="row">
+        <div class="bg col-6">1</div>
+        <div class="bg col-6">2</div>
+    </div>
+
+    <div class="row">
+        <div class="bg col-2">1</div>
+        <div class="bg col-2">2</div>
+        <div class="bg col-2">3</div>
+        <div class="bg col-2">4</div>
+        <div class="bg col-2">5</div>
+        <div class="bg col-2">6</div>
+    </div>
+
+    <div class="row">
+        <div class="bg col-3">1</div>
+        <div class="bg col-3">2</div>
+        <div class="bg col-3">3</div>
+        <div class="bg col-3">4</div>
+    </div>
+</div>
+
+<div class="layout2 container">
+    <div class="row">
+        <div class="bg2 col-6">1</div>
+        <div class="bg2 col-3">2</div>
+        <div class="bg2 col-4">3</div>
+    </div><!--row 안에 컬럼값의 총합은 최대 12까지 쓸수 있으며-->
+    <!--12를 넘는 경우 해당 컬럼은 자동으로 다음줄에 배치-->
+</div>
+
+<div class="layout2 container">
+    <div class="row">
+        <div class="bg3 col-sm-3">col-sm-3</div>
+        <div class="bg3 col-sm-3">col-sm-3</div>
+        <div class="bg3 col-sm-3">col-sm-3</div>
+        <div class="bg3 col-sm-3">col-sm-3</div>
+    </div>
+    <div class="row">
+        <div class="bg3 col-md-3">col-md-3</div>
+        <div class="bg3 col-md-3">col-md-3</div>
+        <div class="bg3 col-md-3">col-md-3</div>
+        <div class="bg3 col-md-3">col-md-3</div>
+    </div>
+    <div class="row">
+        <div class="bg3 col-xl-3">col-xl-3</div>
+        <div class="bg3 col-xl-3">col-xl-3</div>
+        <div class="bg3 col-xl-3">col-xl-3</div>
+        <div class="bg3 col-xl-3">col-xl-3</div>
+    </div>
+</div>
+
+<h2>레이아웃 클래스 혼합 설정</h2>
+<p>하나의 요소애 레이아웃 클래스를 여러개를 설정할 수도 있음</p>
+<p>d-*-none:특정 화면 크기일때 요소를 화면에서 보이지 않게 함</p>
+<p>d-*-block:특정 화면 크기일때 요소를 화면에서 보이게 함</p>
+<p>d-block:특정 요소를 화면에서 무조건 보이게 함</p>
+<p>d-none:특정 요소를 화면에서 무조건 보이지 않게 함</p>
+<div class="layout1 container">
+    <div class="row">
+        <div class="bg4 col-lg-3 col-md-6">col-lg-3 col-md-6</div>
+        <div class="bg4 col-lg-3">col-lg-3</div>
+        <div class="bg4 col-lg-3 col-md-6">col-lg-3 col-md-6</div>
+        <div class="bg4 col-lg-3">col-lg-3</div>
+    </div>
+</div>
+
+<h2>컬럼 간 간격 띄우기</h2>
+<p>offset-*클래스를 사용하면 컬럼 간 간격을 만들어 서로 띄울수 있음</p>
+<div class="layout1 container">
+    <div class="row">
+        <div class="bg5 col-xl-3">col-xl-3 </div>
+        <div class="bg5 col-xl-3 offset-xl-6">col-xl-3 offset-xl-</div>
+    </div>
+    <div class="row">
+        <div class="bg5 col-xl-3 offset-xl-3">col-xl-3 offset-xl-3</div>
+        <div class="bg5 col-xl-3 offset-xl-3">col-xl-3 offset-xl-3</div>
+    </div>
+    <div class="row">
+        <div class="bg5 col-xl-6 offset-xl-3">col-xl-6 offset-xl-3</div>
+    </div>
+</div>
+<h2>컬럼 중첩하기</h2>
+<p>row 클래스로 선언된 컬럼안에 다시 row 클래스를 선언하면
+    컬럼을 중첩해서 정의할 수도 있음</p>
+<div class="layout1 container">
+    <div class="row">
+        <div class="bg5 col-xl-6 ">
+            <div class="row">
+                <div class="col-md-4">1</div>
+                <div class="col-md-4">2</div>
+                <div class="col-md-4">3</div>
+            </div>
+        </div>
+        <div class="bg5 col-xl-6">
+            <div class="row">
+                <div class="col-md-3">1</div>
+                <div class="col-md-3">2</div>
+                <div class="col-md-3">3</div>
+                <div class="col-md-3">4</div>
+            </div>
+        </div>
+    </div>
+</div>
+<h2>행 정렬하기</h2>
+<p>justify-content-* 클래스로 행안에 정의된 컬럼을 정렬할 수 있음</p>
+<p>단, 컬럼의 총 너비는 12보다 작아야 적용됨</p>
+<div class="layout2 container">
+    <div class="row justify-content-center"><!--가운데정렬-->
+        <div class="bg col-xl-3"></div>
+        <div class="bg col-xl-3"></div>
+    </div>
+    <div class="row justify-content-end"><!--오른쪽정렬-->
+        <div class="bg col-xl-3"></div>
+        <div class="bg col-xl-3"></div>
+    </div>
+    <div class="row justify-content-start"><!--왼쪽정렬-->
+        <div class="bg col-xl-3"></div>
+        <div class="bg col-xl-3"></div>
+    </div>
+    <div class="row justify-content-around"><!--양쪽여유공간정렬-->
+        <div class="bg col-xl-3"></div>
+        <div class="bg col-xl-3"></div>
+    </div>
+    <div class="row justify-content-between"><!--균등졍렬-->
+        <div class="bg col-xl-3"></div>
+        <div class="bg col-xl-3"></div>
+    </div>
+</div>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="css/bootstrap.min.js"></script>
+</body>
+</html>
+
+

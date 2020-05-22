@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <title>부트스트랩 폼</title>
+</head>
+<body>
+<h1>폼 다루기</h1>
+<h2>기본예제</h2>
+<p>각각의 폼 요소는 form-control 클래스로 지정하고, 라벨과 폼요소는 form-group 클래스로 지정함</p>
+
+<form>
+    <div>아이디<input type="text"></div>
+    <div>비밀번호<input type="password"></div>
+    <div><button type="button">입력완료</button></div>
+    <div><button type="reset">입력취소</button></div>
+</form>
+<hr>
+
+<form>
+    <div class="form-group">
+        <label>아이디</label>
+        <input type="text"class="form-control col-2"placeholder="아이디를 입력하세요">
+    </div>
+    <div class="form-group">
+        <label>비밀번호</label>
+        <input type="password"class="form-control col-2"placeholder="비밀번호를 입력하세요">
+    </div>
+    <div class="form-group">
+        <button type="button" class="btn btn-primary">입력완료</button>
+        <button type="reset" class="btn btn-danger">입력취소</button>
+    </div>
+</form>
+
+<h2>폼을 한줄로 나타내기</h2>
+<p>form-inline 클래스를 사용하면 폼 요소들을 한줄에 나타낼 수 있음</p>
+<form class="form-inline col-12">
+    <div class="form-group">
+        <label>아이디</label>
+        <input type="text"class="form-control "placeholder="아이디를 입력하세요">
+    </div>
+    <div class="form-group">
+        <label>비밀번호</label>
+        <input type="password"class="form-control"placeholder="비밀번호를 입력하세요">
+    </div>
+    <div class="form-group">
+        <button type="button" class="btn btn-primary">입력완료</button>
+        <button type="reset" class="btn btn-danger">입력취소</button>
+    </div>
+</form>
+<h2>폼을 수평으로 배치하기</h2>
+<p>form-group 과 row 클래스를 사용하면 각각의 폼 요소들을 한줄에 나타낼 수 있음</p>
+<form>
+    <div class="form-group row" >
+        <label class="col-2 col-form-label">아이디</label>
+        <input type="text"class="form-control col-5"placeholder="아이디를 입력하세요">
+    </div>
+    <div class="form-group row">
+        <label class="col-2 col-form-label">비밀번호</label>
+        <input type="password"class="form-control col-5"placeholder="비밀번호를 입력하세요">
+    </div>
+
+    <div class="form group row">
+        <div class="offset-2">
+            <input type="checkbox">
+            <label>로그인상태 유지</label>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <!--<label class="col-form-label col-2"></label> 이건 방법1 아래 offset-2 는 방법 2-->
+        <button type="button" class="btn btn-primary offset-2">입력완료</button>
+        <button type="reset" class="btn btn-danger">입력취소</button>
+    </div>
+</form>
+
+<h2>커스텀 체크박스 및 라디오 버튼</h2>
+<p> custom-control, custom-checkbox, custom-radio 클래스를 사용하면 기존의 체크박스와
+라디오 버튼보다 다소 세련된 모양을 표현할 수 있음</p>
+<form>
+    <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="check">
+        <label class="custom-control-label" for="check">체크박스</label>
+    </div>
+
+    <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="radio">
+        <label class="custom-control-label" for="radio">라디오박스</label>
+    </div>
+
+    <div class="custom-control custom-switch">
+        <input type="checkbox" class="custom-control-input" id="switch">
+        <label class="custom-control-label" for="switch">스위치</label>
+    </div>
+</form>
+<hr>
+
+<h2>폼 유효성 검사</h2>
+<p>입력 폼에 적합한 데이터가 입력되지 않은경우 사용자에게 입력을 종용하는 메세지를 출력해야 함</p>
+<p>required,min,max,step,pattern,maxlength,type 속성을 이용해서 사용자의 입력값을 체크해서
+이것이 적절히 입력되었는지를 알려줌</p>
+<form method="post" action="addmember.jsp">
+    <div>아이디<input type="text" required="required"> </div>
+    <div>비밀번호<input type="password"> </div>
+    <div>나이<input type="text"> </div>
+    <div>성별<input type="text"> </div>
+    <div><button>입력완료</button></div>
+
+    <div>나이<input type="number" min="1" max="100" required="required"> </div>
+</form>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="css/bootstrap.min.js"></script>
+</body>
+</html>
+
+

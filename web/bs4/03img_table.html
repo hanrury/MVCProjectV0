@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Bootstrap 4 - image & table</title>
+</head>
+<body>
+<h1>이미지와 테이블</h1>
+<h2>반응형 이미지</h2>
+<p>img-fluid 클래스를 사용하면 너비 최대/높이 자동으로 이미지 요소에 부여함</p>
+<img src="../img/slide3.png">
+<img src="../img/slide3.png" class="img-fluid">
+
+<h2>이미지 스타일 적용</h2>
+<p>이미지에 테두리를 표시해서 세련되게 나타내고 싶다면 img-thumbnail 클래스를 적용함</p>
+<img src="../img/thumb1.png" class="img-thumbnail">
+<img src="../img/thumb2.png" class="img-thumbnail">
+<img src="../img/thumb3.png" class="img-thumbnail">
+
+<h2>테이블</h2>
+<p>table 클래스를 이용해서 세련된 형태로 반응형 테이블을 표현할 수 있음</p>
+<table class="table">
+    <tr><th>이름</th><th>국어</th><th>영어</th><th>수학</th></tr>
+    <tr><th>재권</th><th>100</th><th>90</th><th>100</th></tr>
+    <tr><th>창민</th><th>99</th><th>98</th><th>97</th></tr>
+    <tr><th>누리</th><th>92</th><th>98</th><th>97</th></tr>
+</table>
+<hr>
+<p>table-dark, table-danger 등의 속성으로 테이블의 색상을 지정할 수 있음</p>
+<table class="table table-dark">
+    <tr><th>이름</th><th>국어</th><th>영어</th><th>수학</th></tr>
+    <tr><th>재권</th><th>100</th><th>90</th><th>100</th></tr>
+    <tr><th>창민</th><th>99</th><th>98</th><th>97</th></tr>
+    <tr><th>누리</th><th>92</th><th>98</th><th>97</th></tr>
+</table>
+<hr>
+<p>데이블의 제목행에 thead-dark, thead-danger 등의 클래스를 사용하면 제목행의 스타일을 적용할 수 있음</p>
+<table class="table">
+    <thead class="thead-light">
+    <tr><th>이름</th><th>국어</th><th>영어</th><th>수학</th></tr>
+    </thead><!--테이블 제목행-->
+    <tbody>
+    <tr><th>재권</th><th>100</th><th>90</th><th>100</th></tr>
+    <tr><th>창민</th><th>99</th><th>98</th><th>97</th></tr>
+    <tr><th>누리</th><th>92</th><th>98</th><th>97</th></tr>
+    </tbody><!--테이블 본문행-->
+</table>
+<hr>
+<p>table-striped 클래스를 사용하면 얼룩말 무늬(스트라이프) 스타일이 테이블에 적용됨</p>
+<table class="table table-striped">
+    <tr><th>이름</th><th>국어</th><th>영어</th><th>수학</th></tr>
+    <tr><th>재권</th><th>100</th><th>90</th><th>100</th></tr>
+    <tr><th>창민</th><th>99</th><th>98</th><th>97</th></tr>
+    <tr><th>누리</th><th>92</th><th>98</th><th>97</th></tr>
+</table>
+<p>table-bordered 라는 속성을 사용하면 테이블에 테두리를 나타낼 수 있음</p>
+<table class="table table-bordered">
+    <tr><th>이름</th><th>국어</th><th>영어</th><th>수학</th></tr>
+    <tr><th>재권</th><th>100</th><th>90</th><th>100</th></tr>
+    <tr><th>창민</th><th>99</th><th>98</th><th>97</th></tr>
+    <tr><th>누리</th><th>92</th><th>98</th><th>97</th></tr>
+</table>
+<p>table-hover라는 속성을 사용하면 테이블의 특정행에 마우스커서를 올렸을때 배경색이 다르게 나타날수 있음</p>
+<table class="table table-hover">
+    <tr><th>이름</th><th>국어</th><th>영어</th><th>수학</th></tr>
+    <tr><th>재권</th><th>100</th><th>90</th><th>100</th></tr>
+    <tr><th>창민</th><th>99</th><th>98</th><th>97</th></tr>
+    <tr><th>누리</th><th>92</th><th>98</th><th>97</th></tr>
+</table>
+<p>테이블의 행이나 셀에 맥락있는 색상을 나타내려면 table-primary, table-danger 등의 클래스를 사용하면 됨</p>
+<table class="table table-bordered">
+    <tr><th>이름</th><th>국어</th><th>영어</th><th>수학</th></tr>
+    <tr class="table-success"><th>재권</th><th>100</th><th>90</th><th>100</th></tr>
+    <tr class="table-danger"><th>창민</th><th>99</th><th>98</th><th>97</th></tr>
+    <tr><th>누리</th><th>92</th><th>98</th><th>97</th></tr>
+</table>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
